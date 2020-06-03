@@ -49,7 +49,7 @@ class StatusLED():
         pulseIntensity=copy.copy(self.intensity)
         for i in range(outerLEDs):
             pulseIntensity[self.ringStart+i]=(self.power,0,0)
-        for i in range(repeats):
+        for _ in range(repeats):
             self.pulseLEDs(pulseIntensity,t)
             time.sleep(t)
 
